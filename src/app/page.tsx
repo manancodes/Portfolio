@@ -1,16 +1,10 @@
 "use client";
-import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 
 import Particles from "../components/particles";
-import Navigation from "../components/Nav";
+import NavBar from "../components/NavBar";
 import Card from "../components/ProjectCard";
-
-const navigation = [
-  { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
-];
 
 export default function Home() {
   const Projects = [
@@ -42,12 +36,9 @@ export default function Home() {
   ];
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-screen overflow-hidden bg-gradient-to-tl from-black via-neutral-700/20 to-black">
-      <Navigation />
-      <Particles
-        className="absolute inset-0 -z-10 animate-fade-in"
-        quantity={100}
-      />
+    <div className="relative flex flex-col items-center justify-center w-screen overflow-hidden bg-gradient-to-tl from-black via-neutral-700/10 to-black">
+      <NavBar />
+      <Particles quantity={100} />
       <div className="relative w-screen flex items-center justify-center">
         <div className="absolute Grid w-screen -z-10" />
         {/* <div className="pill">
@@ -67,7 +58,7 @@ export default function Home() {
           onClick={() => {
             console.log("pressed");
           }}
-          className="flex items-center justify-center bg-neutral-200 text-black hover:bg-neutral-300 text-white py-2 px-4 rounded-3xl"
+          className="flex items-center justify-center bg-neutral-200 text-black hover:bg-neutral-300 py-2 px-4 rounded-3xl"
         >
           Hire Me
           <Image

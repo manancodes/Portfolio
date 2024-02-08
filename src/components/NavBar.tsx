@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-const Navigation: React.FC = () => {
+const NavBar: React.FC = () => {
   const ref = useRef<HTMLElement>(null);
   const [isIntersecting, setIntersecting] = useState(true);
 
@@ -40,7 +40,7 @@ const Navigation: React.FC = () => {
               onClick={() => {
                 console.log("pressed");
               }}
-              className="flex items-center justify-center bg-neutral-200 text-black hover:bg-neutral-300 text-white py-2 px-4 rounded-3xl"
+              className="flex items-center justify-center bg-neutral-200 text-black hover:bg-neutral-300 py-2 px-4 rounded-3xl"
             >
               Hire Me
               <Image
@@ -64,4 +64,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-export default Navigation;
+export default NavBar;

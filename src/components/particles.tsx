@@ -12,7 +12,6 @@ interface ParticlesProps {
 }
 
 export default function Particles({
-  className = "",
   quantity = 30,
   staticity = 50,
   ease = 50,
@@ -227,7 +226,11 @@ export default function Particles({
   };
 
   return (
-    <div className={className} ref={canvasContainerRef} aria-hidden="true">
+    <div
+      className="absolute inset-0 -z-10 animate-fade-in"
+      ref={canvasContainerRef}
+      aria-hidden="true"
+    >
       <canvas ref={canvasRef} />
     </div>
   );
