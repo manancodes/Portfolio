@@ -1,5 +1,4 @@
 "use client";
-import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
@@ -26,9 +25,14 @@ const NavBar: React.FC = () => {
             ? "bg-zinc-900/0 border-transparent "
             : "bg-zinc-900/500  border-zinc-800 backdrop-blur"
         }`}
-        // backdrop-blur
       >
-        <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
+        <div className="container flex flex-row items-center justify-between p-6 mx-auto">
+          <Link
+            href="/contact"
+            className="duration-200 text-zinc-400 hover:text-zinc-100"
+          >
+            Manan
+          </Link>
           <div className="flex items-center justify-between gap-8">
             <Link
               href="/projects"
@@ -52,12 +56,6 @@ const NavBar: React.FC = () => {
               />
             </button>
           </div>
-          <Link
-            href="/contact"
-            className="duration-200 text-zinc-400 hover:text-zinc-100"
-          >
-            Manan
-          </Link>
         </div>
       </div>
     </header>
