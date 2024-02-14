@@ -5,6 +5,7 @@ import Particles from "@/components/particles";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
       <Particles quantity={100} />
       <Hero />
       <Projects />
+      <div className="divider my-16"></div>
+      <Footer />
     </div>
   );
 }

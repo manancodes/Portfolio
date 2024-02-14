@@ -38,7 +38,7 @@ const ProjectsData: Project[] = [
 ];
 const Projects = () => {
   return (
-    <div className="flex mt-40 flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center">
       <h1 className="z-10 text-4xl text-white cursor-default font-display sm:text-4xl md:text-6xl whitespace-nowrap mb-10">
         Featured Projects
       </h1>
@@ -54,7 +54,7 @@ const Projects = () => {
             return (
               <div
                 key={id}
-                className=" mx-auto flex max-w-md items-center justify-center rounded-md bg-neutral-950 border border-neutral-600"
+                className=" mx-auto flex max-w-lg items-center justify-center rounded-lg bg-neutral-900 bg-opacity-30 border border-neutral-800"
               >
                 <div className="relative p-4 h-full flex flex-col justify-between">
                   <div>

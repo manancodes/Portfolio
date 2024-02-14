@@ -5,7 +5,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <>
-      <div className="relative w-screen flex flex-col items-center justify-center">
+      <div className="relative w-screen flex flex-col items-center justify-center ">
         <div className="absolute Grid w-screen -z-10" />
         <div className="border border-neutral-700 bg-opacity-20 mt-56 rounded-3xl p-1 pl-6 pr-6">
           <p className=" text-sm  text-neutral-400">FOLLOW MY JOURNEY</p>
@@ -19,7 +19,7 @@ const Hero = () => {
           I build mobile and web apps using React and React Native
         </h2>
       </div>
-      <div className="flex w-80 justify-evenly">
+      <div className="flex w-80 justify-evenly mb-40">
         <button
           onClick={() => {
             console.log("pressed");
