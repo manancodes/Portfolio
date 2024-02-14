@@ -1,7 +1,7 @@
 "use client";
+import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 
 const NavBar: React.FC = () => {
   const ref = useRef<HTMLElement>(null);
@@ -28,14 +28,14 @@ const NavBar: React.FC = () => {
       >
         <div className="container flex flex-row items-center justify-between p-6 mx-auto">
           <Link
-            href="/contact"
+            href="/"
             className="duration-200 text-zinc-400 hover:text-zinc-100"
           >
             Manan
           </Link>
           <div className="flex items-center justify-between gap-8">
             <Link
-              href="/projects"
+              href="/"
               className="duration-200 text-zinc-400 hover:text-zinc-100"
             >
               Projects
@@ -47,13 +47,7 @@ const NavBar: React.FC = () => {
               className="flex items-center justify-center bg-neutral-200 text-black hover:bg-neutral-300 py-2 px-4 rounded-3xl"
             >
               Hire Me
-              <Image
-                alt="manan"
-                src={`/RightChevron.svg`}
-                className="ml-1 w-2 h-2 fill-blue-100"
-                width={4}
-                height={4}
-              />
+              <ChevronRight size={18} className="ml-1" color="#777" />
             </button>
           </div>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import { ChevronRight } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -27,13 +27,7 @@ const Hero = () => {
           className="flex items-center justify-center bg-neutral-200 text-black hover:bg-neutral-300 py-3 px-6 rounded-3xl"
         >
           Hire Me
-          <Image
-            alt="manan"
-            src={`/RightChevron.svg`}
-            className="ml-1 w-2 h-2 fill-blue-100"
-            width={4}
-            height={4}
-          />
+          <ChevronRight size={18} className="ml-1" color="#777" />
         </button>
       </div>
     </>
