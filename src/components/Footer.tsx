@@ -17,7 +17,7 @@ const Footer = () => {
           className="duration-200 text-zinc-400 hover:text-zinc-100"
         >
           <div className="w-full flex items-center justify-center text-7xl font-bold">
-            <h1 className="">Let's work together</h1>
+            <h1 className="">Let&apos;s work together</h1>
             <ArrowUpRight size={100} />
           </div>
         </Link>
