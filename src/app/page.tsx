@@ -10,7 +10,7 @@ import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col items-center justify-center w-screen overflow-hidden bg-gradient-to-tl from-black via-neutral-700/10 to-black lg:px-48 md:px-24 sm:px-10 px-10">
+    <div className="relative flex flex-col items-center justify-center w-screen overflow-hidden bg-gradient-to-tl from-black via-neutral-700/10 to-black lg:px-48 md:px-24 sm:px-10 px-4">
       <NavBar />
       <Particles quantity={100} />
       <Hero />

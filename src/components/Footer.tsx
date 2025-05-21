@@ -11,19 +11,19 @@ import {
 const Footer = () => {
   return (
     <div className="w-full flex items-center justify-center">
-      <div className="w-11/12 md:w-full px-4 text-white flex flex-col items-center">
+      <div className="w-full text-white flex flex-col items-center">
         <Link
           target="_blank"
           href="https://cal.com/manancodes/30min"
           className="duration-200 text-neutral-400 hover:text-neutral-100 w-full"
         >
-          <div className="w-full flex items-center justify-center text-center gap-4 md:gap-6 text-5xl md:text-6xl lg:text-7xl font-bold">
+          <div className="w-full flex items-center justify-center text-center gap-4 md:gap-6 text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold">
             <h1>Let&apos;s work together</h1>
-            <LuArrowUpRight className="text-6xl md:text-[100px] flex-shrink-0" />
+            <LuArrowUpRight className="text-4xl md:text-6xl lg:text-8xl flex-shrink-0" />
           </div>
         </Link>
 
-        <div className="flex flex-wrap justify-center gap-14 mt-6 mb-12">
+        <div className="flex flex-wrap justify-center md:gap-14 gap-6 mt-6 mb-12">
           <Link
             href="https://github.com/manancodes"
             target="_blank"

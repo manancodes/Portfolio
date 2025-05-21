@@ -53,11 +53,7 @@ const NavBar: React.FC = () => {
   return (
     <header ref={ref}>
       <div
-        className={`fixed inset-x-0 top-0 z-50 duration-200 border-b ${
-          isIntersecting
-            ? "bg-neutral-900/0"
-            : "bg-neutral-900/500 backdrop-blur"
-        } ${
+        className={`fixed inset-x-0 top-0 z-50 duration-200 border-b backdrop-blur  ${
           !menuOpen && !isIntersecting
             ? "border-neutral-800"
             : "border-transparent"

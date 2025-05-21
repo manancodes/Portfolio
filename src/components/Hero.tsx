@@ -7,7 +7,7 @@ const Hero = () => {
     <>
       <div className="relative w-screen flex flex-col items-center justify-center ">
         <div className="absolute Grid w-screen -z-10" />
-        <div className="md:mt-56 mt-40">
+        <div className="md:mt-56 mt-32">
           <SectionTitle title="INTRODUCTION" />
         </div>
         <h1 className="z-10 mt-10 text-5xl text-white font-semibold sm:text-5xl md:text-7xl text-center">
@@ -19,7 +19,7 @@ const Hero = () => {
           I build mobile and web apps using React and React Native
         </h2>
       </div>
-      <div className="flex w-80 justify-evenly mb-40">
+      <div className="flex w-80 justify-evenly md:mb-40 mb-28">
         <Link
           target="_blank"
           href="https://cal.com/manancodes/30min"
