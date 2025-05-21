@@ -19,7 +19,7 @@ const Footer = () => {
         >
           <div className="w-full flex items-center justify-center text-center gap-4 md:gap-6 text-5xl md:text-6xl lg:text-7xl font-bold">
             <h1>Let&apos;s work together</h1>
-            <LuArrowUpRight className="text-6xl md:text-[100px]" />
+            <LuArrowUpRight className="text-6xl md:text-[100px] flex-shrink-0" />
           </div>
         </Link>
 

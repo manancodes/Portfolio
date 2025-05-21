@@ -7,7 +7,7 @@ const Hero = () => {
     <>
       <div className="relative w-screen flex flex-col items-center justify-center ">
         <div className="absolute Grid w-screen -z-10" />
-        <div className="mt-56">
+        <div className="md:mt-56 mt-40">
           <SectionTitle title="INTRODUCTION" />
         </div>
         <h1 className="z-10 mt-10 text-5xl text-white font-semibold sm:text-5xl md:text-7xl text-center">
