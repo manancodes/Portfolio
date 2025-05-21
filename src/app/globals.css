@@ -42,8 +42,69 @@ body {
 .divider {
   width: 100%;
   height: 25px;
-  background-image: url("/Line.svg");
+  min-height: 25px;
+  background-image: url("/line.svg");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 100%;
+}
+.white-logo {
+  filter: brightness(0) invert(1);
+}
+.carousel-container-clients {
+  overflow: hidden;
+}
+.carousel-clients {
+  display: inline-flex;
+  animation: carousel 15s linear infinite;
+}
+.carousel-fade-clients {
+  position: relative;
+}
+
+.carousel-fade-clients:after,
+.carousel-fade-clients:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 240px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .carousel-fade-clients:after,
+  .carousel-fade-clients:before {
+    width: 100px;
+  }
+}
+
+.carousel-fade-clients:before {
+  left: 0;
+  background-image: linear-gradient(90deg, #030303, hsla(0, 0%, 100%, 0));
+}
+
+.carousel-fade-clients:after {
+  right: 0;
+  background-image: linear-gradient(270deg, #060606, hsla(0, 0%, 100%, 0));
+}
+@keyframes carousel-reverse {
+  0% {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%) translateZ(0);
+  }
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(-50%) translateZ(0);
+  }
+
+  to {
+    transform: translateX(0) translateZ(0);
+  }
 }

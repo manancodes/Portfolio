@@ -1,18 +1,51 @@
 "use client";
-import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
+
+interface NavLinksProps {
+  onClick?: () => void;
+  className?: string;
+}
+
+const NavLinks: React.FC<NavLinksProps> = ({ onClick, className = "" }) => (
+  <div className={className}>
+    <Link
+      href="#projects"
+      onClick={onClick}
+      className="text-neutral-400 hover:text-neutral-100 duration-200"
+    >
+      Projects
+    </Link>
+    <Link
+      href="#experience"
+      onClick={onClick}
+      className="text-neutral-400 hover:text-neutral-100 duration-200"
+    >
+      Experience
+    </Link>
+    <Link
+      target="_blank"
+      href="https://cal.com/manancodes/30min"
+      onClick={onClick}
+      className="flex items-center justify-center bg-white text-black hover:bg-neutral-300 py-3 px-6 rounded-lg font-semibold"
+      style={{ boxShadow: "inset 0 -4px 0 0 rgba(0, 0, 0, .25)" }}
+    >
+      Book a Call with Me!
+    </Link>
+  </div>
+);
 
 const NavBar: React.FC = () => {
   const ref = useRef<HTMLElement>(null);
   const [isIntersecting, setIntersecting] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     if (!ref.current) return;
     const observer = new IntersectionObserver(([entry]) =>
       setIntersecting(entry.isIntersecting)
     );
-
     observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
@@ -20,37 +53,46 @@ const NavBar: React.FC = () => {
   return (
     <header ref={ref}>
       <div
-        className={`fixed inset-x-0 top-0 z-50 duration-200 border-b  ${
+        className={`fixed inset-x-0 top-0 z-50 duration-200 border-b ${
           isIntersecting
-            ? "bg-zinc-900/0 border-transparent "
-            : "bg-zinc-900/500  border-zinc-800 backdrop-blur"
+            ? "bg-neutral-900/0"
+            : "bg-neutral-900/500 backdrop-blur"
+        } ${
+          !menuOpen && !isIntersecting
+            ? "border-neutral-800"
+            : "border-transparent"
         }`}
       >
-        <div className="container flex flex-row items-center justify-between p-6 mx-auto">
+        <div className="container mx-auto flex items-center justify-between p-4">
           <Link
             href="/"
-            className="duration-200 text-zinc-400 hover:text-zinc-100"
+            className="text-neutral-400 hover:text-neutral-100 duration-200 text-lg font-semibold"
           >
             Manan
           </Link>
-          <div className="flex items-center justify-between gap-8">
-            <Link
-              href="/"
-              className="duration-200 text-zinc-400 hover:text-zinc-100"
-            >
-              Projects
-            </Link>
-            <button
-              onClick={() => {
-                console.log("pressed");
-              }}
-              className="flex items-center justify-center bg-neutral-200 text-black hover:bg-neutral-300 py-2 px-4 rounded-3xl"
-            >
-              Hire Me
-              <ChevronRight size={18} className="ml-1" color="#777" />
-            </button>
-          </div>
+
+          {/* Desktop Nav */}
+          <NavLinks className="hidden md:flex items-center gap-8" />
+
+          {/* Mobile Menu Toggle */}
+          <button
+            className="md:hidden text-neutral-400 hover:text-neutral-100 text-2xl"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle Menu"
+          >
+            {menuOpen ? <FiX /> : <FiMenu />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <div className="md:hidden">
+            <NavLinks
+              onClick={() => setMenuOpen(false)}
+              className="flex flex-col items-center p-4 gap-4"
+            />
+          </div>
+        )}
       </div>
     </header>
   );

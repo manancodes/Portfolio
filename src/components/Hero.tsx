@@ -1,34 +1,33 @@
-"use client";
 import React from "react";
-import { ChevronRight } from "lucide-react";
+import Link from "next/link";
+import SectionTitle from "@/components/SectionTitle";
 
 const Hero = () => {
   return (
     <>
       <div className="relative w-screen flex flex-col items-center justify-center ">
         <div className="absolute Grid w-screen -z-10" />
-        <div className="border border-neutral-700 bg-opacity-20 mt-56 rounded-3xl p-1 pl-6 pr-6">
-          <p className=" text-sm  text-neutral-400">FOLLOW MY JOURNEY</p>
+        <div className="mt-56">
+          <SectionTitle title="INTRODUCTION" />
         </div>
-        <h1 className="z-10 mt-10 text-5xl text-gray-300 font-semibold cursor-default sm:text-5xl md:text-7xl whitespace-nowrap text-center">
+        <h1 className="z-10 mt-10 text-5xl text-white font-semibold sm:text-5xl md:text-7xl text-center">
           Transforming ideas to apps
         </h1>
       </div>
       <div className="my-10 text-center animate-fade-in">
-        <h2 className=" text-xl text-zinc-500 ">
+        <h2 className=" text-xl text-neutral-400 ">
           I build mobile and web apps using React and React Native
         </h2>
       </div>
       <div className="flex w-80 justify-evenly mb-40">
-        <button
-          onClick={() => {
-            console.log("pressed");
-          }}
-          className="flex items-center justify-center bg-neutral-200 text-black hover:bg-neutral-300 py-3 px-6 rounded-3xl"
+        <Link
+          target="_blank"
+          href="https://cal.com/manancodes/30min"
+          className="flex items-center justify-center bg-white text-black hover:bg-neutral-300 py-3 px-6 rounded-lg font-semibold"
+          style={{ boxShadow: "inset 0 -4px 0 0 rgba(0, 0, 0, .25)" }}
         >
-          Hire Me
-          <ChevronRight size={18} className="ml-1" color="#777" />
-        </button>
+          Book a Call with Me!
+        </Link>
       </div>
     </>
   );
