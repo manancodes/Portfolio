@@ -12,9 +12,11 @@ import {
   SiTailwindcss,
   SiExpo,
   SiAppstore,
+  SiRedux,
+  SiMongodb,
+  SiNuxtdotjs,
 } from "react-icons/si";
 import { TbBrandReactNative, TbExternalLink } from "react-icons/tb";
-import { FaApple, FaGooglePlay } from "react-icons/fa";
 import { IoCodeSlash, IoLogoGooglePlaystore } from "react-icons/io5";
 
 type Project = {
@@ -29,10 +31,24 @@ type Project = {
 const ProjectsData: Project[] = [
   {
     id: 1,
+    projectName: "Guardrail AI",
+    description:
+      "Guardrail is a fact checker for your AI chatbots. It provides feedback on the accuracy of the information provided by AI models like chatGPT and Gemini.",
+    technologies: ["React", "Nuxt.js", "Tailwind CSS", "Redux", "MongoDB"],
+    imageSrc: "/Guardrail.png",
+    links: [
+      {
+        label: "Demo",
+        url: "https://app.azdev.guardrail.tech",
+      },
+    ],
+  },
+  {
+    id: 2,
     projectName: "Hud Hud Hub",
     description:
       "Hud Hud is a Qatar based e-commerce app for grocery delivery, features include cart, order management, favourites, product catalog, and secure checkout",
-    technologies: ["React-Native", "Expo", "Tailwind CSS"],
+    technologies: ["React-Native", "Expo", "Tailwind CSS", "Redux"],
     imageSrc: "/HudHudApp.png",
     links: [
       {
@@ -42,7 +58,7 @@ const ProjectsData: Project[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     projectName: "Screenbows",
     description:
       "Screenbows is a web-based color generation tool that allows you to create and download beautiful color palettes as image files for your design and development projects.",
@@ -54,7 +70,7 @@ const ProjectsData: Project[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     projectName: "PixelCast",
     description: "PixelCast is a simple weather app with Pixel Design.",
     technologies: ["React-Native", "Expo"],
@@ -65,7 +81,7 @@ const ProjectsData: Project[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     projectName: "Usernaminator",
     description:
       "Usernaminator searches major social media platforms to find the perfect username for you.",
@@ -77,7 +93,7 @@ const ProjectsData: Project[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     projectName: "Wellpaper",
     description:
       "Awesome outfits for your phone. A wallpaper app with Search, Sort, Filters, and Quick-Filters.",
@@ -86,15 +102,10 @@ const ProjectsData: Project[] = [
     links: [
       { label: "Code", url: "https://github.com/manancodes/Wellpaper" },
       { label: "Demo", url: "https://wellpaper.vercel.app/" },
-      // { label: "App Store", url: "https://appstore.com/wellpaper" },
-      // {
-      //   label: "Play Store",
-      //   url: "https://play.google.com/store/apps/wellpaper",
-      // },
     ],
   },
   {
-    id: 6,
+    id: 7,
     projectName: "Ministry of Talent",
     description:
       "A proof-of-concept SaaS platform to empower job seekers with AI-driven, customized resumes via MOT-Profile, helping craft professional resumes to impress employers.",
@@ -111,14 +122,17 @@ const ProjectsData: Project[] = [
 ];
 
 const techIcons: { [key: string]: React.ReactNode } = {
-  React: <SiReact size={20} className="text-blue-500" />,
-  CSS: <SiCss3 size={20} className="text-blue-400" />,
-  HTML: <SiHtml5 size={20} className="text-orange-500" />,
-  Javascript: <SiJavascript size={20} className="text-yellow-500" />,
-  "Next.js": <SiNextdotjs size={20} className="text-white" />,
-  "Tailwind CSS": <SiTailwindcss size={20} className="text-teal-400" />,
-  "React-Native": <TbBrandReactNative size={20} className="text-white" />,
-  Expo: <SiExpo size={20} className="text-white" />,
+  React: <SiReact className="text-blue-500" />,
+  CSS: <SiCss3 className="text-blue-400" />,
+  HTML: <SiHtml5 className="text-orange-500" />,
+  Javascript: <SiJavascript className="text-yellow-500" />,
+  "Next.js": <SiNextdotjs className="text-white" />,
+  "Tailwind CSS": <SiTailwindcss className="text-teal-400" />,
+  "React-Native": <TbBrandReactNative className="text-blue-500" />,
+  Expo: <SiExpo className="text-white" />,
+  Redux: <SiRedux className="text-white" />,
+  MongoDB: <SiMongodb className="text-green-700" />,
+  "Nuxt.js": <SiNuxtdotjs className="text-green-400" />,
 };
 
 const linkIcons: { [key: string]: React.ReactNode } = {
@@ -169,11 +183,11 @@ const Projects = () => {
                       {technologies.map((tech: string, index: number) => (
                         <div
                           key={index}
-                          className="flex items-center mr-2 mb-2"
+                          className="flex items-center mr-4 mb-2"
                         >
                           {techIcons[tech] ? (
                             <>
-                              {techIcons[tech]}
+                              <span className="h-4 w-4">{techIcons[tech]}</span>
                               <span className="ml-2 text-sm text-gray-400">
                                 {tech}
                               </span>
