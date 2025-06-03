@@ -12,57 +12,64 @@ type Experience = {
 const Experiences: Experience[] = [
   {
     id: 1,
-    time: "09/2022 – 10/2024 (Employee), 11/2024 – Present (Contractor)",
-    designation: "Senior Software Developer • Akivna Technologies (CNHi)",
+    time: "10/2024 – Present",
+    designation: "Freelance Frontend Developer • Independent Contractor",
     points: [
-      "Led end-to-end development of key features, reducing project delivery timelines by 20%.",
-      "Developed scalable e-commerce platforms using Next.js and GraphQL.",
-      "Used TailwindCSS extensively to build modular and responsive UI components.",
-      "Delivered complex modules within the first 10 days of joining, speeding up release cycles by 15%.",
-      "Transitioned from full-time employee to independent contractor while maintaining full-time workload.",
+      "Developed PulseFit, a fitness app with workout and nutrition tracking, deployed on App Store/Play Store.",
+      "Built HudHudHub, a grocery e-commerce app with cart and order management, deployed regionally in Qatar.",
     ],
-    technologies: [
-      "Next.js",
-      "React-Native",
-      "TypeScript",
-      "GraphQL",
-      "TailwindCSS",
-      "Redux",
-      "SQL",
-      "WatermelonDB",
-      "Bluetooth",
-      "Git",
-      "Azure DevOps",
-    ],
+    technologies: ["React Native", "TypeScript", "AWS", "Firebase"],
   },
   {
     id: 2,
-    time: "10/2021 – 09/2022",
-    designation: "Full Stack Developer • goHarness (Publicis Sapient)",
+    time: "09/2022 – 09/2024",
+    designation: "Software Developer • Akivna Technologies (CNHi, Makro Pro)",
     points: [
-      "Developed and optimized React.js + VTEX based e-commerce websites for 3 major brands.",
-      "Built 5+ POCs that contributed to client wins worth $500K+.",
-      "Delivered all sprints on time, achieving 98% punctuality under Agile/Scrum methodology.",
+      "Led end-to-end e-commerce platform development using Next.js and GraphQL, driving scalability.",
+      "Self-taught Next.js in 2 days to contribute to a major e-commerce project.",
+      "Translated business requirements into technical specifications for efficient development.",
+      "Developed a Bluetooth-based app using React Native, TypeScript, and WatermelonDB to stream and store tractor bale data offline, enabling real-time monitoring.",
+      "Created a BLE simulator app with React Native to mimic tractor data streams, facilitating testing without hardware.",
+    ],
+    technologies: [
+      "Next.js",
+      "React Native",
+      "TypeScript",
+      "GraphQL",
+      "WatermelonDB",
+    ],
+  },
+  {
+    id: 3,
+    time: "10/2021 – 09/2022",
+    designation:
+      "Associate Experience Technology L2 • goHarness (Publicis Sapient)",
+    points: [
+      "Developed e-commerce websites for 3 brands using React.js and VTEX, enhancing client engagement.",
+      "Led 5+ proof-of-concepts with React and TypeScript, securing client approvals.",
+      "Built responsive UI from Figma designs using React and Sass for cross-device compatibility.",
+      "Followed Agile and Scrum methodologies using Git/GitHub for timely delivery.",
     ],
     technologies: [
       "React.js",
       "VTEX",
       "Redux",
-      "JavaScript",
+      "TypeScript",
       "Sass",
       "Git",
+      "GitHub",
       "Figma",
     ],
   },
   {
-    id: 3,
+    id: 4,
     time: "05/2019 – 09/2021",
     designation: "Lead Mentor and Full-Stack Developer • goHarness",
     points: [
-      "Delivered 5+ web/mobile projects with 100% client retention.",
-      "Managed teams of 3–6 developers, reducing average project timelines by 30%.",
-      "Integrated Elasticsearch for search across 10,000+ records.",
-      "Converted 80% of client leads from Canada, USA, and Dubai into long-term engagements.",
+      "Led teams of 3–6 to deliver 5+ projects using React.js and React Native, ensuring client satisfaction.",
+      "Implemented Elasticsearch for efficient text-based search across 10,000+ records.",
+      "Developed responsive e-commerce platforms with Redux and Magento.",
+      "Engaged with clients from Canada, USA, and Dubai to meet business requirements.",
     ],
     technologies: [
       "React.js",
@@ -70,19 +77,18 @@ const Experiences: Experience[] = [
       "Firebase",
       "Redux",
       "Magento",
-      "JavaScript",
       "Elasticsearch",
       "Git",
+      "GitHub",
     ],
   },
   {
-    id: 4,
+    id: 5,
     time: "01/2020 – 03/2020 & 01/2021 – 03/2021",
     designation: "Lead Full-Stack Trainer • goHarness (Xceedance)",
     points: [
-      "Delivered two 60-day full-stack bootcamps with hands-on capstone projects.",
-      "Managed 20 in-office and 40 remote trainees with 1-on-1 support and customized content.",
-      "Achieved a 100% bootcamp completion rate and strong client feedback.",
+      "Delivered 2 full-stack bootcamps, training 60 employees with hands-on exercises.",
+      "Designed comprehensive capstone projects to enhance trainee skills.",
     ],
     technologies: [],
   },
@@ -100,7 +106,7 @@ const Experience = () => {
           <p className="text-xs md:text-sm text-neutral-500">
             {experience.time}
           </p>
-          <h3 className=" text-white my-1 text-lg font-semibold">
+          <h3 className="text-white my-1 text-lg font-semibold">
             {experience.designation}
           </h3>
           <ul className="flex flex-col gap-1 mt-3 md:mt-1 text-md list-disc list-inside text-neutral-400">
