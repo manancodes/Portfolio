@@ -104,21 +104,6 @@ const ProjectsData: Project[] = [
       { label: "Demo", url: "https://wellpaper.vercel.app/" },
     ],
   },
-  {
-    id: 7,
-    projectName: "Ministry of Talent",
-    description:
-      "A proof-of-concept SaaS platform to empower job seekers with AI-driven, customized resumes via MOT-Profile, helping craft professional resumes to impress employers.",
-    technologies: ["React", "Next.js", "Tailwind CSS"],
-    imageSrc: "/MotDesktop.png",
-    links: [
-      {
-        label: "Code",
-        url: "https://github.com/manancodes/Ministry-of-talent",
-      },
-      { label: "Demo", url: "https://ministry-of-talent.netlify.app/" },
-    ],
-  },
 ];
 
 const techIcons: { [key: string]: React.ReactNode } = {
