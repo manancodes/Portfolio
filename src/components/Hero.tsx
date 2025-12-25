@@ -16,7 +16,8 @@ const Hero = () => {
       </div>
       <div className="my-10 text-center animate-fade-in">
         <h2 className=" text-xl text-neutral-400 ">
-          I build mobile and web apps using React and React Native
+          I build high-performance, scalable apps using React, Next.js and React
+          Native.
         </h2>
       </div>
       <div className="flex w-80 justify-evenly md:mb-40 mb-28">
